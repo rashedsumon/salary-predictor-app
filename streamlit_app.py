@@ -23,7 +23,7 @@ try:
     with st.spinner("Downloading dataset and building predictive intelligence..."):
         model, raw_df = initialize_app()
     
-    st.success("App environment initialized successfully!")
+    
     
     st.subheader("Enter Professional Profiles")
     
