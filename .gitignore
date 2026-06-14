@@ -1,0 +1,12 @@
+# Cache and system files
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Datasets and Local Cache (KaggleHub downloads)
+.kagglehub/
+*.csv
+
+# Saved Model Objects
+*.pkl
+*.joblib
