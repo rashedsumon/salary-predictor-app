@@ -30,8 +30,8 @@ def build_and_train_model():
     y = df[target_col]
     
     # Quick data cleaning: Filter rare job titles to prevent pipeline breakdown
-    top_titles = X['job_title'].value_counts().index Harvey = X['job_title'].value_counts().index[:20]
-    X['job_title'] = X['job_title'].apply(lambda x: x if x in top_titles else 'Other')
+    top_titles = list(X['job_title'].value_counts().index[:20])
+    X.loc[:, 'job_title'] = X['job_title'].apply(lambda x: x if x in top_titles else 'Other')
 
     # 2. Split Data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
